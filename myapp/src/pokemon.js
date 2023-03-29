@@ -13,7 +13,9 @@ export function Pokemon() {
         setData(json)
         setError("")
         console.log(data)
-        setInput("") } catch(error) {
+        setInput("")
+        setDisabled(false) 
+        } catch(error) {
             setError("errore, riprova con un altro pokemon")
             setData([])
         }
@@ -24,7 +26,7 @@ export function Pokemon() {
     function HandleMoreInfo() {
         setmoreinfo(true)
     }
-    
+    return (
         <div>
             <input 
             value={input}
